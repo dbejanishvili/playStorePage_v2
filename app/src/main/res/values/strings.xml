@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PlayStorePage_v2</string>
+    <string name="app_rating">4.3</string>
+    <string name="num_billions">1</string>
+    <string name="play_store_app_name">Maps</string>
+    <string name="manufacturer">Google Inc.</string>
+    <string name="manufacturer_rating">3+</string>
+    <string name="rate_count">5,493,032</string>
+    <string name="left_button">UNINSTALL</string>
+    <string name="right_button">OPEN</string>
+    <string name="offer">Get the latest Google Maps app.</string>
+    <string name="WHATS_NEW">WHAT\'S NEW</string>
+    <string name="update_info">
+        • Easily find hours and phone numbers for large department
+        stores with the new department store directory in Google Maps.\n(US only)
+    </string>
+    <string name="READ_MORE">READ MORE</string>
+    <string name="acc_name">Giorgi Bochorishvili</string>
+    <string name="ask_to_rate">Rate this app</string>
+    <string name="rewiew_info">Reviews are linked to your account and are public</string>
+</resources>
