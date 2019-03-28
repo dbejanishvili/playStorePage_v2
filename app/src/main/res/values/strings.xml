@@ -10,6 +10,8 @@
     <string name="right_button">OPEN</string>
     <string name="offer">Get the latest Google Maps app.</string>
     <string name="WHATS_NEW">WHAT\'S NEW</string>
+    <string name="travelAndLocal">Travel &amp; Local</string>
+    <string name="similar_button_str">Similar</string>
     <string name="update_info">
         • Easily find hours and phone numbers for large department
         stores with the new department store directory in Google Maps.\n(US only)
