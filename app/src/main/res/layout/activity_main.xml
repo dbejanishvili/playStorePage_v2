@@ -270,7 +270,7 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout2"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="115dp"
                 android:layout_marginTop="32dp"
                 android:background="@color/updateTextBackground"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -445,18 +445,6 @@
                 app:layout_constraintStart_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <RatingBar
-                android:id="@+id/ratingBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:numStars="5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
             <View
                 android:id="@+id/view4"
                 android:layout_width="0dp"
@@ -482,7 +470,7 @@
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+                app:layout_constraintTop_toBottomOf="@+id/ratingStar1" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -519,6 +507,63 @@
                 app:layout_constraintStart_toEndOf="@+id/textView16"
                 app:layout_constraintTop_toTopOf="@id/textView16"
                 app:srcCompat="@drawable/ic_person" />
+
+            <ImageView
+                android:id="@+id/ratingStar1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/ratingStar2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView13"
+                app:srcCompat="@drawable/icons8_star_500" />
+
+            <ImageView
+                android:id="@+id/ratingStar2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/ratingStar3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ratingStar1"
+                app:layout_constraintTop_toTopOf="@id/ratingStar1"
+                app:srcCompat="@drawable/icons8_star_500" />
+
+            <ImageView
+                android:id="@+id/ratingStar3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/ratingStar4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ratingStar2"
+                app:layout_constraintTop_toTopOf="@id/ratingStar2"
+                app:srcCompat="@drawable/icons8_star_500" />
+
+            <ImageView
+                android:id="@+id/ratingStar4"
+                android:clickable="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toStartOf="@+id/ratingStar5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ratingStar3"
+                app:layout_constraintTop_toTopOf="@id/ratingStar3"
+                app:srcCompat="@drawable/icons8_star_500" />
+
+            <ImageView
+                android:id="@+id/ratingStar5"
+                android:clickable="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ratingStar4"
+                app:layout_constraintTop_toTopOf="@id/ratingStar4"
+                app:srcCompat="@drawable/icons8_star_500" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>

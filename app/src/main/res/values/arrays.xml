@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="ratingStarImages">
+        <item>@id/ratingStar1</item>
+        <item>@id/ratingStar2</item>
+        <item>@id/ratingStar3</item>
+        <item>@id/ratingStar4</item>
+        <item>@id/ratingStar5</item>
+    </integer-array>
+</resources>
