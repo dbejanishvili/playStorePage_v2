@@ -174,6 +174,64 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <ImageView
+                    android:id="@+id/miniRatingStar1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="10dp"
+                    android:clickable="false"
+                    app:layout_constraintEnd_toStartOf="@+id/miniRatingStar2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView3"
+                    app:srcCompat="@drawable/icons8_star_filled_500" />
+
+                <ImageView
+                    android:id="@+id/miniRatingStar2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:clickable="false"
+                    app:layout_constraintEnd_toStartOf="@+id/miniRatingStar3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/miniRatingStar1"
+                    app:layout_constraintTop_toTopOf="@id/miniRatingStar1"
+                    app:srcCompat="@drawable/icons8_star_filled_500" />
+
+                <ImageView
+                    android:id="@+id/miniRatingStar3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:clickable="false"
+                    app:layout_constraintEnd_toStartOf="@+id/miniRatingStar4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/miniRatingStar2"
+                    app:layout_constraintTop_toTopOf="@id/miniRatingStar2"
+                    app:srcCompat="@drawable/icons8_star_filled_500" />
+
+                <ImageView
+                    android:id="@+id/miniRatingStar4"
+                    android:clickable="false"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/miniRatingStar5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/miniRatingStar3"
+                    app:layout_constraintTop_toTopOf="@id/miniRatingStar3"
+                    app:srcCompat="@drawable/icons8_star_filled_500" />
+
+                <ImageView
+                    android:id="@+id/miniRatingStar5"
+                    android:clickable="false"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/miniRatingStar4"
+                    app:layout_constraintTop_toTopOf="@id/miniRatingStar4"
+                    app:srcCompat="@drawable/icons8_star_500" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -510,8 +568,8 @@
 
             <ImageView
                 android:id="@+id/ratingStar1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginTop="16dp"
                 android:clickable="true"
                 app:layout_constraintEnd_toStartOf="@+id/ratingStar2"
@@ -522,8 +580,8 @@
 
             <ImageView
                 android:id="@+id/ratingStar2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:clickable="true"
                 app:layout_constraintEnd_toStartOf="@+id/ratingStar3"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -533,8 +591,8 @@
 
             <ImageView
                 android:id="@+id/ratingStar3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:clickable="true"
                 app:layout_constraintEnd_toStartOf="@+id/ratingStar4"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -545,8 +603,8 @@
             <ImageView
                 android:id="@+id/ratingStar4"
                 android:clickable="true"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 app:layout_constraintEnd_toStartOf="@+id/ratingStar5"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/ratingStar3"
@@ -556,13 +614,67 @@
             <ImageView
                 android:id="@+id/ratingStar5"
                 android:clickable="true"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/ratingStar4"
                 app:layout_constraintTop_toTopOf="@id/ratingStar4"
+                app:srcCompat="@drawable/icons8_star_500" />
+
+            <ImageView
+                android:id="@+id/miniRatingStar11"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="0dp"
+                android:clickable="false"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/textView16"
+                app:layout_constraintBottom_toTopOf="@id/textView16"
+                app:srcCompat="@drawable/icons8_star_filled_500" />
+
+            <ImageView
+                android:id="@+id/miniRatingStar12"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:clickable="false"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/miniRatingStar11"
+                app:layout_constraintBottom_toBottomOf="@id/miniRatingStar11"
+                app:srcCompat="@drawable/icons8_star_filled_500" />
+
+            <ImageView
+                android:id="@+id/miniRatingStar13"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:clickable="false"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/miniRatingStar12"
+                app:layout_constraintBottom_toBottomOf="@id/miniRatingStar12"
+                app:srcCompat="@drawable/icons8_star_filled_500" />
+
+            <ImageView
+                android:id="@+id/miniRatingStar14"
+                android:clickable="false"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/miniRatingStar13"
+                app:layout_constraintBottom_toBottomOf="@id/miniRatingStar13"
+                app:srcCompat="@drawable/icons8_star_filled_500" />
+
+            <ImageView
+                android:id="@+id/miniRatingStar15"
+                android:clickable="false"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/miniRatingStar14"
+                app:layout_constraintBottom_toBottomOf="@id/miniRatingStar14"
                 app:srcCompat="@drawable/icons8_star_500" />
 
         </android.support.constraint.ConstraintLayout>
