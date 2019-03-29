@@ -7,4 +7,5 @@
         <item>@id/ratingStar4</item>
         <item>@id/ratingStar5</item>
     </integer-array>
+
 </resources>

@@ -11,77 +11,90 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int filledStarId = R.drawable.icons8_star_filled_500;
-    private int emptyStarId = R.drawable.icons8_star_500;
-    private TypedArray ratingStars = getResources().obtainTypedArray(R.array.ratingStarImages);
+    private int filledStarId;
+    private int emptyStarId;
+    private TypedArray ratingStars;
 
-    private View.OnClickListener defaultButtonListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Button but = (Button) v;
-            String snackbarMessage = "you just clicked on a button " + but.getText();
-            View mainView = findViewById(R.id.mainView);
-            Snackbar snackbar = Snackbar.make(mainView,snackbarMessage,Snackbar.LENGTH_LONG);
-            snackbar.show();
-        }
-    };
+    private void displayButtonName(String name) {
+        String snackbarMessage = "You just clicked on a button: " + name;
+        View mainView = findViewById(R.id.mainView);
+        Snackbar snackbar = Snackbar.make(mainView,snackbarMessage,Snackbar.LENGTH_LONG);
+        snackbar.show();
+    }
 
     private void updateRatingBar(int rating){
+        int n = ratingStars.length();
         for(int i=0;i<=rating;i++){
             ImageView star = findViewById(ratingStars.getResourceId(i,-1));
             star.setImageResource(filledStarId);
         }
-        for(int i=rating+1;i<=4;i++){
+        for(int i=rating+1;i<=n;i++){
             ImageView star = findViewById(ratingStars.getResourceId(i,-1));
             star.setImageResource(emptyStarId);
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ratingStars = getResources().obtainTypedArray(R.array.ratingStarImages);
+        emptyStarId = R.drawable.icons8_star_500;
+        filledStarId = R.drawable.icons8_star_filled_500;
+
         addButtonListeners();
         addRatingBarListeners();
     }
 
+
+
+
     private void addButtonListeners() {
-        findViewById(R.id.uninstallButton).setOnClickListener(defaultButtonListener);
-        findViewById(R.id.openButton).setOnClickListener(defaultButtonListener);
-        findViewById(R.id.travelAndLocalButton).setOnClickListener(defaultButtonListener);
-        findViewById(R.id.similarButton).setOnClickListener(defaultButtonListener);
-        findViewById(R.id.readMoreButton).setOnClickListener(defaultButtonListener);
+        findViewById(R.id.uninstallButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayButtonName("UNINSTALL");
+            }
+        });
+
+        findViewById(R.id.openButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayButtonName("OPEN");
+            }
+        });
+        findViewById(R.id.travelAndLocalButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayButtonName("Travel & Local");
+            }
+        });
+
+        findViewById(R.id.similarButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayButtonName("Similar");
+            }
+        });
+
+        findViewById(R.id.readMoreButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayButtonName("READ MORE");
+            }
+        });
     }
 
     private void addRatingBarListeners() {
-        findViewById(R.id.ratingStar1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateRatingBar(0);
-            }
-        });
-        findViewById(R.id.ratingStar2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateRatingBar(1);
-            }
-        });
-        findViewById(R.id.ratingStar3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateRatingBar(2);
-            }
-        });
-        findViewById(R.id.ratingStar4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateRatingBar(3);
-            }
-        });
-        findViewById(R.id.ratingStar5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateRatingBar(4);
-            }
-        });
+        int n = ratingStars.length();
+        for(int i=0;i<n;i++){
+            final int j = i;
+            findViewById(ratingStars.getResourceId(i,-1)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    updateRatingBar(j);
+                }
+            });
+        }
     }
 }
